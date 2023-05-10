@@ -90,17 +90,15 @@ void dijkstra(int src, vector<list<destination_weight>> &adj)
 int main()
 {
     int V, E;
-        cout<<"ENTER NUMBER OF VERTICES AND EDGES\n";
-
+    cout<<"ENTER NUMBER OF VERTICES AND EDGES\n";
     cin >> V >> E;
     vector<list<destination_weight>> adj(V);
     for (int i = 0; i < E; ++i)
     {
-        cout<<"ENTER VALUES[source,designation,weight]\n";
+        cout<<"ENTER VALUES[source,destination,weight]\n";
         int u, v, w;
         cin >> u >> v >> w;
         adj[u].push_back({v, w});
-        adj[v].push_back({u, w});
     }
     dijkstra(0, adj);
     return 0;
